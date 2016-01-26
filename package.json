@@ -1,0 +1,27 @@
+{
+  "name": "regular-old-enum",
+  "version": "1.0.0",
+  "description": "A regular old enum for JavaScript without any complicated shit",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dustinboston/regular-old-enum.git"
+  },
+  "keywords": [
+    "enum",
+    "JavaScript"
+  ],
+  "author": "Dustin Boston",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/dustinboston/regular-old-enum/issues"
+  },
+  "homepage": "https://github.com/dustinboston/regular-old-enum#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  }
+}
