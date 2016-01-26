@@ -1,0 +1,26 @@
+{
+  "name": "regular-old-enum",
+  "description": "A regular old enum for JavaScript without any complicated shit",
+  "main": "index.js",
+  "authors": [
+    "Dustin Boston"
+  ],
+  "license": "GPL-3.0",
+  "keywords": [
+    "enum",
+    "JavaScript"
+  ],
+  "homepage": "https://github.com/dustinboston/regular-old-enum",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
