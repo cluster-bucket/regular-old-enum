@@ -6,6 +6,16 @@ everyone thinks they need to have in their enum.
 Installation
 ------------
 
+You can install this thing a couple of ways.
+
+**In ye olde browsers**
+
+```js
+bower install regular-old-enum --save
+```
+
+**And on the server**
+
 ```js
 npm install regular-old-enum --save
 ```

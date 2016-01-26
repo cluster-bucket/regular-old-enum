@@ -26,4 +26,17 @@ Enum.prototype.getName = function (value) {
   return _args[value];
 };
 
-module.exports = Enum;
+// UMD wrapper for use in Node, AMD, or browser globals
+// https://github.com/umdjs/umd (returnExports.js)
+(function (root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    define([], factory);
+  } else if (typeof module === 'object' && module.exports) {
+    module.exports = factory();
+  } else {
+    root.returnExports = factory();
+  }
+}(this, function () {
+  return Enum;
+}));
+
