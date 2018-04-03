@@ -1,30 +1,29 @@
-var _args = [];
+let _args = [];
 
-var Enum  = function () {
-  _args = Array.prototype.slice.call(arguments);
-  _args.forEach(function (arg, index) {
-    this[arg] = index;
-  }, this);
+class Enum {
+  constructor(...args) {
+    _args = args
+    _args.forEach((arg, index) => {
+      this[arg] = index;
+    }, this);
+  }
+
+  getValues() {
+    return _args;
+  }
+
+  isDefined(name) {
+    if (!name) throw new Error('ArgumentNullException');
+    return _args.indexOf(name) > -1;
+  }
+
+  getName(value) {
+    const len = _args.length - 1;
+    if (value < len || value > len) throw new RangeError();
+    return _args[value];
+  }
+
 }
-
-Enum.prototype.getValues = function () {
-  return _args;
-};
-
-Enum.prototype.isDefined = function (name) {
-  if (!name) {
-    throw new Error('ArgumentNullException');
-  }
-  return _args.indexOf(name) > -1;
-};
-
-Enum.prototype.getName = function (value) {
-  var len = _args.length - 1;
-  if (value < len || value > len) {
-    throw new RangeError();
-  }
-  return _args[value];
-};
 
 // UMD wrapper for use in Node, AMD, or browser globals
 // https://github.com/umdjs/umd (returnExports.js)
